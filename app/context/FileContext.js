@@ -52,7 +52,7 @@ const useFileStore = create((set) => ({
     moveFile: async (id, newParentId) => {
         try {
             const res = await axios.put(
-                `${process.env.NEXT_PUBLIC_BACKEND_URL}/${id}/move`,  // ✅ Correct endpoint
+                `${process.env.NEXT_PUBLIC_BACKEND_URL}/move/${id}`,  // ✅ Correct endpoint
                 { parentId: newParentId }
         );
 
